@@ -1,0 +1,315 @@
+:root{
+    --pink:#e84393;
+}
+
+*{
+    margin: 0;padding: 0 ;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.1);
+    background-color: rgb(18, 103, 18);
+   
+   
+}
+header .logo{
+    font-size: 3rem;
+  
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: white;
+}
+header .navbar a:hover{
+    color: var(--pink);
+}
+header .active{
+    color: red !important;
+}
+header .icons a{
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 1.5rem ;
+}
+header .icons a:hover{
+    color: var(--pink);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem .1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0,.3);
+    display: none;
+
+}
+
+/* end header */
+
+/* begin slide */
+#slider{
+    margin-top: 110px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+  }
+  
+  .aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dot-container{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  }
+  .dot{
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  .dot.active{
+    background-color: #333;
+  }
+/* end slide */
+/* footer */
+footer{
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px 0 0 0;
+}
+footer .container .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+footer .container .row .col-4{
+    flex-basis: 33.333333%;
+    padding: 0 15px;
+}
+footer p.copyriht{
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+}
+footer .container .row .col-4 img{
+    margin: 10px 0;
+}
+footer .container .row .col-4 .name_website{
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+footer .container .row .col-4 p{
+    font-size: 14px;
+    word-break: break-all;
+}
+footer .container .row .col-4 ul{
+    list-style: none;
+}
+footer .container .row .col-4 ul li{
+    margin: 10px 0;
+
+}
+footer .container .row .col-4 .title{
+    color: #FF0040;
+    letter-spacing: 1px;
+}
+footer .container .row .col-4 ul li a{
+    text-decoration: none;
+    color: rgb(238, 28, 28);
+    font-size: 0.9rem;
+}
+footer .container .row .col-4 ul li a:hover{
+    text-decoration: underline;
+}
+.sticky-top{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+/* screen */
+
+@media(max-width:768px){
+    header .fa-bars{
+        display: block;
+      
+    }
+   
+   
+    header .navbar{
+        position: absolute;
+        top: 100%;left:0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0,.1);
+        clip-path: polygon(0  0,100% 0,100% 0,0 0);
+     
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0  0,100% 0,100% 100%,0% 100%);;
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 1rem solid rgba(0, 0, 0, .1);
+        display: block; 
+        color: black;
+  
+     
+    
+    } 
+}
+/* Body product one */
+.body_product{
+    padding: 30px 10px;
+    margin-top: 100px;
+}
+.body_product .container .title{
+    width: 100%;
+    text-align: center;
+    background: #ddd;
+    padding: 15px 0;
+}
+.body_product .container .title h3{
+    text-transform: uppercase;
+    font-weight:600;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+.body_product .container .show_product{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.body_product .container .show_product .card {
+    flex-basis: 18%;
+    margin: 10px 5px;
+}
+.body_product .container .show_product .card .items{
+    position: relative;
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.body_product .container .show_product .card .items .image img{
+    width: 100%;
+}
+.body_product .container .show_product .card .items .text {
+    text-align: left;
+    padding: 5px 0;
+}
+.body_product .container .show_product .card .items .text h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+.body_product .container .show_product .card .items .text p{
+    font-weight: 500;
+    margin: 5px 0;
+}
+.body_product .container .show_product .card .items .color{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.body_product .container .show_product .card .items .color span{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.body_product .container .show_product .card .items .color span:nth-child(1){
+    background: #FA5882;
+}
+.body_product .container .show_product .card .items .color span:nth-child(2){
+    background: #2E2EFE;
+}
+.body_product .container .show_product .card .items .color span:nth-child(3){
+    background: #5858FA;
+}
+.body_product .container .show_product .card .items .color span:nth-child(4){
+    background: #FF0040;
+}
+.body_product .container .show_product .card .items .button{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s ease-out;
+}
+.body_product .container .show_product .card .items:hover .button{
+    opacity: 1;
+    top: 50%;
+}
+.body_product .container .show_product .card .items .button a{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    background:#2E2EFE;
+    color: #ffff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.body_product .container .show_product .card .items .button a:hover{
+    background: #FE2E64;
+}
